@@ -1,0 +1,91 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Hamburger i Frytki",
+      "img": "https://img.freepik.com/darmowe-zdjecie/zakonczenie-hamburger-z-kamiennym-tlem_23-2148273030.jpg?size=626&ext=jpg",
+      "rating": 4,
+      "time": 30,
+      "favorite": true,
+      "categories": ["Mięso", "Bułka", "Fast Food"],
+      "ingredients": [
+        { "name": "bułka", "amount": 1, "unit": "sztuka" },
+        { "name": "pomidor", "amount": 2, "unit": "plaster" },
+        { "name": "ser", "amount": 3, "unit": "g" },
+        { "name": "ziemniaki", "amount": "2", "unit": "kg" }
+      ],
+      "steps": [
+        "Pokrój bułkę na dwie części.",
+        "Wylej olej na patelnie.",
+        "Smaż mięso do uzyskania brązowej barwy.",
+        "Pokrój warzywa na plasterki.",
+        "Nasmaruj połówki bułki majonezem i sosem czosnkowym.",
+        "Ułóż mięso na dolnej połówce i przełóż je plastrem sera.",
+        "Połóż sałatę oraz pozostałe warzywa.",
+        "Przykryj bułką.",
+        "Usmaż frytki.",
+        "Podaj wszystko na talerzu."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Ryba Smażona",
+      "img": "https://www.mojegotowanie.pl/media/cache/default_view/uploads/media/recipe/0002/03/fish-and-chips.jpeg",
+      "rating": 3,
+      "time": 90,
+      "favorite": false,
+      "categories": ["Ryba", "Frytki", "Fast Food"],
+      "ingredients": [
+        { "name": "ryba", "amount": 1, "unit": "sztuka" },
+        { "name": "cytryna", "amount": 2, "unit": "kropla" },
+        { "name": "frytki", "amount": 500, "unit": "g" },
+        { "name": "sałata", "amount": "2", "unit": "liść" }
+      ],
+      "steps": [
+        "Usmaż rybę na patelni.",
+        "Wylej olej na patelnie",
+        "Usmaż frytki",
+        "Pokrój warzywa na plasterki.",
+        "Podaj wszystko na talerzu."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Szejk Czekoladowy",
+      "img": "https://keto-mojo.com/wp-content/uploads/2020/05/Keto-Chocolate-Milkshake.jpg",
+      "rating": 2,
+      "time": 5,
+      "favorite": false,
+      "categories": ["Deser", "Szejk", "Czekolada"],
+      "ingredients": [
+        { "name": "mleko", "amount": 500, "unit": "ml" },
+        { "name": "czekolada", "amount": 6, "unit": "kostka" },
+        { "name": "banan", "amount": 2, "unit": "sztuka" }
+      ],
+      "steps": [
+        "Zmieszaj banan z czekoladą i mlekiem.",
+        "Zblenduj",
+        "Podaj w szklance"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Tort",
+      "img": "https://www.oetker.pl/Recipe/Recipes/oetker.pl/pl-pl/baking/image-thumb__68260__RecipeDetail/tort-niespodzianka-z-masa-cukrowa.jpg",
+      "rating": 5,
+      "time": 5,
+      "favorite": false,
+      "categories": ["Deser", "Tort", "Czekolada"],
+      "ingredients": [
+        { "name": "mleko", "amount": 500, "unit": "ml" },
+        { "name": "czekolada", "amount": 6, "unit": "kostka" },
+        { "name": "banan", "amount": 2, "unit": "sztuka" }
+      ],
+      "steps": [
+        "Zmieszaj banan z czekoladą i mlekiem.",
+        "Zblenduj",
+        "Podaj w szklance"
+      ]
+    }
+  ]
+}
