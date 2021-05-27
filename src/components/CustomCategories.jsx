@@ -2,7 +2,7 @@ import Categories from './Categories';
 import { useSelector } from 'react-redux';
 
 const CustomCategories = () => {
-  const recipes = useSelector((state) => state.recipes);
+  const recipes = useSelector((state) => state.recipes.all);
   let customCategories = [];
 
   for (const recipe of recipes) {
@@ -17,8 +17,6 @@ const CustomCategories = () => {
     name: category,
     icon: '',
   }));
-
-  console.log(customCategories);
 
   return <Categories categories={customCategories} />;
 };

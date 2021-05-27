@@ -9,10 +9,12 @@
       "favorite": true,
       "categories": ["Mięso", "Bułka", "Fast Food"],
       "ingredients": [
-        { "name": "bułka", "amount": 1, "unit": "sztuka" },
-        { "name": "pomidor", "amount": 2, "unit": "plaster" },
-        { "name": "ser", "amount": 3, "unit": "g" },
-        { "name": "ziemniaki", "amount": "2", "unit": "kg" }
+        { "name": "bułka", "amount": "1 sztuka" },
+        { "name": "pomidor", "amount": "2 plastry" },
+        { "name": "ser", "amount": "3g" },
+        { "name": "ziemniaki", "amount": "2kg" },
+        { "name": "sałata", "amount": "2 liście" },
+        { "name": "cebula", "amount": "2 krążki" }
       ],
       "steps": [
         "Pokrój bułkę na dwie części.",
@@ -36,10 +38,10 @@
       "favorite": false,
       "categories": ["Ryba", "Frytki", "Fast Food"],
       "ingredients": [
-        { "name": "ryba", "amount": 1, "unit": "sztuka" },
-        { "name": "cytryna", "amount": 2, "unit": "kropla" },
-        { "name": "frytki", "amount": 500, "unit": "g" },
-        { "name": "sałata", "amount": "2", "unit": "liść" }
+        { "name": "ryba", "amount": "1 sztuka" },
+        { "name": "cytryna", "amount": "2 krople" },
+        { "name": "frytki", "amount": "500g" },
+        { "name": "sałata", "amount": "2 liście" }
       ],
       "steps": [
         "Usmaż rybę na patelni.",
@@ -77,9 +79,9 @@
       "favorite": false,
       "categories": ["Deser", "Tort", "Czekolada"],
       "ingredients": [
-        { "name": "mleko", "amount": 500, "unit": "ml" },
-        { "name": "czekolada", "amount": 6, "unit": "kostka" },
-        { "name": "banan", "amount": 2, "unit": "sztuka" }
+        { "name": "mleko", "amount": "500ml" },
+        { "name": "czekolada", "amount": "6 kostek" },
+        { "name": "banan", "amount": "2 sztuki" }
       ],
       "steps": [
         "Zmieszaj banan z czekoladą i mlekiem.",

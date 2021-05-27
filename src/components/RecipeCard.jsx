@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import Icon from './Icon';
+import { useHistory } from 'react-router-dom';
 import RecipeActions from './RecipeActions';
+import RecipeTime from './RecipeTime';
 import Stars from './Stars';
 
 const StyledDiv = styled.div`
@@ -11,9 +12,21 @@ const StyledDiv = styled.div`
   box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 10%);
   cursor: pointer;
   transition: transform 0.2s;
+  animation: 0.2s ease-out 1 pop;
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   &::after {
@@ -63,18 +76,14 @@ const StyledInfo = styled.div`
   justify-content: space-between;
 `;
 
-const StyledTime = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 1.6rem;
-  color: rgb(var(--color-lightgray));
-  font-weight: bold;
-`;
-
 const RecipeCard = ({ recipe }) => {
+  const history = useHistory();
+
   return (
-    <StyledDiv key={recipe.id}>
+    <StyledDiv
+      onClick={() => history.push(`/recipes/${recipe.id}`)}
+      key={recipe.id}
+    >
       <RecipeActions recipe={recipe} />
 
       <StyledFigure>
@@ -83,12 +92,7 @@ const RecipeCard = ({ recipe }) => {
 
       <StyledHeading>{recipe.name}</StyledHeading>
       <StyledInfo>
-        <StyledTime>
-          <Icon size='2rem' margin='0.8rem'>
-            schedule
-          </Icon>
-          {recipe.time} minut
-        </StyledTime>
+        <RecipeTime time={recipe.time} />
         <Stars count={recipe.rating} />
       </StyledInfo>
     </StyledDiv>

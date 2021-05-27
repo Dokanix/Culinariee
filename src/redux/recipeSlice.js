@@ -2,14 +2,17 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const recipeSlice = createSlice({
   name: 'recipe',
-  initialState: [],
+  initialState: {
+    all: [],
+    active: null,
+  },
   reducers: {
     initializeRecipes: (state, action) => {
-      state = action.payload;
+      state.all = action.payload;
       return state;
     },
     toggleFavorite: (state, action) => {
-      const favorite = state.find((recipe) => recipe.id === action.payload);
+      const favorite = state.all.find((recipe) => recipe.id === action.payload);
       favorite.favorite = !favorite.favorite;
     },
   },

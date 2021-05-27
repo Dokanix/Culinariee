@@ -40,9 +40,14 @@ const StyledAction = styled.button`
 const RecipeActions = ({ recipe }) => {
   const dispatch = useDispatch();
 
+  const handleClick = (event) => {
+    event.stopPropagation();
+    dispatch(toggleFavorite(recipe.id));
+  };
+
   return (
     <StyledDiv>
-      <StyledAction onClick={() => dispatch(toggleFavorite(recipe.id))}>
+      <StyledAction onClick={handleClick}>
         <Icon color='rgb(var(--color-red))'>
           {recipe.favorite ? 'favorite' : 'favorite_border'}
         </Icon>

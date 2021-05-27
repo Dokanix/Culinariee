@@ -1,6 +1,8 @@
 const colors = `
   --color-background: 255, 255, 255;
+  --color-white: 255, 255, 255;
   --color-text: 35, 35, 35;
+  --color-graytext: 91, 91, 91;
   --color-primary: 255, 234, 197;
   --color-lightprimary: 255, 246, 234;
   --color-brown: 193, 95, 65;

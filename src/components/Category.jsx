@@ -26,9 +26,9 @@ const StyledDiv = styled.div`
     top: 0;
     bottom: 0;
     width: 2rem;
-    background-color: rgb(var(--color-green));
+    background-color: rgb(var(--color-secondary));
     left: 0;
-    box-shadow: 0.1rem 0.3rem 0.8rem rgba(var(--color-green), 30%);
+    box-shadow: 0.1rem 0.3rem 0.8rem rgba(var(--color-secondary), 30%);
     transform: translateX(${({ selected }) => (selected ? '' : '-100%')});
     transition: all 0.2s;
   }

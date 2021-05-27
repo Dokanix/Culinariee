@@ -4,26 +4,32 @@ import axios from 'axios';
 import { initializeRecipes } from '../redux/recipeSlice';
 import RecipeCard from './RecipeCard';
 import styled from 'styled-components';
+import RecipeAdder from './RecipeAdder';
 
 const StyledDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   grid-gap: 4.8rem;
+  align-items: center;
+  justify-items: center;
 `;
 
 const filterRecipes = (activeCategory) => {
   switch (activeCategory) {
     case 'Wszystkie':
-      return ({ recipes }) => recipes;
+      return ({ recipes }) => recipes.all;
     case 'Ulubione':
-      return ({ recipes }) => recipes.filter((recipe) => recipe.favorite);
+      return ({ recipes }) => recipes.all.filter((recipe) => recipe.favorite);
     case 'Ostatnie':
-      return ({ recipes }) => recipes;
+      return ({ recipes }) => recipes.all;
     case 'Najlepsze':
-      return ({ recipes }) => [...recipes].sort((a, b) => b.rating - a.rating);
+      return ({ recipes }) =>
+        [...recipes.all].sort((a, b) => b.rating - a.rating);
     default:
       return ({ recipes }) =>
-        recipes.filter((recipe) => recipe.categories.includes(activeCategory));
+        recipes.all.filter((recipe) =>
+          recipe.categories.includes(activeCategory)
+        );
   }
 };
 
@@ -43,6 +49,7 @@ const RecipeList = () => {
 
   return (
     <StyledDiv>
+      <RecipeAdder />
       {recipes.map((recipe) => (
         <RecipeCard key={recipe.id} recipe={recipe} />
       ))}
